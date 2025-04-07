@@ -1,0 +1,120 @@
+// Toggle global options
+$enable-gradients: false;
+$enable-rounded: false;
+$enable-shadows: false;
+$spacer: 1.25rem;
+$spacers: (
+    1: ($spacer * 0.3)
+);
+$gray-700: #495057;
+
+// Include functions first
+@import "bootstrap/scss/functions";
+
+// Colors
+
+$white:                           #fff;
+$gray-300:                        #dee2e6;
+$gray-900:                        #212529;
+$body-color:                        $gray-900;
+
+$purple:                          #65578e;
+$primary:                           $purple;
+
+
+// Font Family and Font Size
+$font-family-sans-serif:            "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-size-base:                    0.875rem; // 14px based on the design, using the browser default, typically `16px`
+
+// Headings 
+$headings-font-weight:              700;
+$headings-line-height:              1.1;
+
+$h5-font-size:                      $font-size-base * 1.1;
+
+// Nav Tabs
+$nav-link-padding-y:                .5rem;
+$nav-link-padding-x:                1.125rem;
+$nav-tabs-border-width:             0;
+
+// List Group
+$list-group-item-padding-y:         1.125rem;
+$list-group-item-padding-x:         1.25rem;
+
+$list-group-hover-bg:               $white;
+$list-group-active-color:           $body-color;
+$list-group-active-bg:              transparent;
+
+$list-group-action-color:           $primary;
+$list-group-action-hover-color:     darken($primary, 15%);
+
+$list-group-action-active-color:    $body-color;
+$list-group-action-active-bg:       transparent;
+
+// Required
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+// Add custom gray color for background generation
+$theme-colors: map-merge($theme-colors, (
+  "gray": $gray-300,
+));
+
+$sizes: map-merge($sizes, (
+  600: 600px
+));
+
+// Optional
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
+@import "bootstrap/scss/type";
+@import "bootstrap/scss/images";
+// @import "bootstrap/scss/code";
+@import "bootstrap/scss/grid";
+// @import "bootstrap/scss/tables";
+// @import "bootstrap/scss/forms";
+// @import "bootstrap/scss/buttons";
+@import "bootstrap/scss/transitions";
+// @import "bootstrap/scss/dropdown";
+// @import "bootstrap/scss/button-group";
+// @import "bootstrap/scss/input-group";
+// @import "bootstrap/scss/custom-forms";
+@import "bootstrap/scss/nav";
+// @import "bootstrap/scss/navbar";
+@import "bootstrap/scss/card";
+// @import "bootstrap/scss/breadcrumb";
+// @import "bootstrap/scss/pagination";
+// @import "bootstrap/scss/badge";
+// @import "bootstrap/scss/jumbotron";
+// @import "bootstrap/scss/alert";
+// @import "bootstrap/scss/progress";
+// @import "bootstrap/scss/media";
+@import "bootstrap/scss/list-group";
+// @import "bootstrap/scss/close";
+// @import "bootstrap/scss/toasts";
+// @import "bootstrap/scss/modal";
+// @import "bootstrap/scss/tooltip";
+// @import "bootstrap/scss/popover";
+// @import "bootstrap/scss/carousel";
+// @import "bootstrap/scss/spinners";
+// @import "bootstrap/scss/print";
+
+
+// Utilities
+// @import "bootstrap/scss/utilities/align";
+@import "bootstrap/scss/utilities/background";
+@import "bootstrap/scss/utilities/borders";
+// @import "bootstrap/scss/utilities/clearfix";
+@import "bootstrap/scss/utilities/display";
+// @import "bootstrap/scss/utilities/embed";
+@import "bootstrap/scss/utilities/flex";
+// @import "bootstrap/scss/utilities/float";
+// @import "bootstrap/scss/utilities/overflow";
+// @import "bootstrap/scss/utilities/position";
+// @import "bootstrap/scss/utilities/screenreaders";
+// @import "bootstrap/scss/utilities/shadows";
+@import "bootstrap/scss/utilities/sizing";
+// @import "bootstrap/scss/utilities/stretched-link";
+@import "bootstrap/scss/utilities/spacing";
+@import "bootstrap/scss/utilities/text";
+// @import "bootstrap/scss/utilities/visibility";

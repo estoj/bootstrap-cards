@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Card – Odoo</title>
+</head>
+<body class="container">
+    <div class="card mt-5 mx-auto w-600 mw-100">
+        <!-- Navigation tabs -->
+        <div class="card-header bg-dark border-bottom-0">
+            <ul class="nav nav-tabs card-header-tabs" id="nav-tab" role="tablist">
+                <li class="nav-item bg-gray">
+                    <a class="nav-link active" id="tab1-tab" data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true">Tab 1</a>
+                </li>
+                <li class="nav-item ml-1 bg-gray">
+                    <a class="nav-link" id="tab2-tab" data-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false">Tab 2</a>
+                </li>
+                <li class="nav-item ml-1 bg-gray">
+                    <a class="nav-link" id="tab3-tab" data-toggle="tab" href="#tab3" role="tab" aria-controls="tab3" aria-selected="false">Tab 3</a>
+                </li>
+                <li class="nav-item ml-1 bg-gray">
+                    <a class="nav-link disabled bg-secondary text-white" data-toggle="tab" role="tab" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Card content -->
+        <div class="card-body p-0">
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+                    <div class="pt-3 px-3 pb-4 border-bottom">
+                        <h2 class="card-title h5">Card title</h4>
+                        <h3 class="card-subtitle h6 text-muted">Card subtitle</h6>
+                    </div>
+                    <div class="row no-gutters">
+                        <div class="col-md-6">
+                            <div class="list-group list-group-flush" id="items-tab" role="tablist">
+                                <a class="list-group-item list-group-item-action active" id="items-1-tab" data-toggle="pill" href="#items-1" role="tab" aria-controls="items-1" aria-selected="true">
+                                    An item
+                                </a>
+                                <a class="list-group-item list-group-item-action" id="items-2-tab" data-toggle="pill" href="#items-2" role="tab" aria-controls="items-2" aria-selected="false">
+                                    A second item
+                                </a>
+                                <a class="list-group-item list-group-item-action" id="items-3-tab" data-toggle="pill" href="#items-3" role="tab" aria-controls="items-3" aria-selected="false">
+                                    A third item
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="tab-content" id="items-tabContent">
+                                <div class="tab-pane show active" id="items-1" role="tabpanel" aria-labelledby="items-1-tab">
+                                    <picture>
+                                        <source srcset="https://placehold.co/555x345/blue/white?text=Pic-1" media="(max-width: 768px)" width="555" height="345">
+                                        <img class="img-fluid" src="https://placehold.co/300x175/blue/white?text=Pic-1" alt="White 'Pic-1' text on a blue background" width="300" height="175">
+                                    </picture>
+                                </div>
+                                <div class="tab-pane" id="items-2" role="tabpanel" aria-labelledby="items-2-tab">
+                                    <picture>
+                                        <source srcset="https://placehold.co/555x345/yellow/black?text=Pic-2" media="(max-width: 768px)" width="555" height="345">
+                                        <img class="img-fluid" src="https://placehold.co/300x175/yellow/black?text=Pic-2" alt="Black 'Pic-2' text on a yellow background" width="300" height="175">
+                                    </picture>
+                                </div>
+                                <div class="tab-pane" id="items-3" role="tabpanel" aria-labelledby="items-3-tab">
+                                    <picture>
+                                        <source srcset="https://placehold.co/555x345/black/white?text=Pic-3" media="(max-width: 768px)" width="555" height="345">
+                                        <img class="img-fluid" src="https://placehold.co/300x175/black/white?text=Pic-3" alt="White 'Pic-3' text on a black background" width="300" height="175">
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+                    <div class="d-flex justify-content-center align-items-center flex-column p-5">
+                        Loading…
+                        <svg class="mt-2" width="34" height="34" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34">
+                            <style>
+                                .spinner {fill: none; stroke: #000; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2px;transform-origin:center;animation:spinner_animation .75s infinite linear}
+                                @keyframes spinner_animation{100%{transform:rotate(360deg)}}
+                            </style>
+                            <path class="spinner" d="M1,17c0-2.21.45-4.31,1.26-6.23s1.98-3.64,3.43-5.09,3.17-2.62,5.09-3.43"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="tab-pane" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <picture>
+                                <source srcset="https://placehold.co/555x345/red/white?text=Image" media="(max-width: 768px)" width="555" height="345" class="img-fluid">
+                                <img src="https://placehold.co/200x186/red/white?text=Image" alt="White 'Image' text on a red background"  width="200" height="186" class="img-fluid">
+                            </picture>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body d-flex flex-column justify-content-center h-100">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                        </div>
+                        </div>
+                </div>
+            </div>
+            <div class="card-footer bg-dark text-white">
+                2 days ago
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html> 

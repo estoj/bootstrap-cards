@@ -1,0 +1,31 @@
+{
+  "name": "odoo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/estoj/bootstrap-cards.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/estoj/bootstrap-cards/issues"
+  },
+  "homepage": "https://github.com/estoj/bootstrap-cards#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "sass": "^1.86.3",
+    "vite": "^6.2.5"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "v4.3"
+  }
+}
