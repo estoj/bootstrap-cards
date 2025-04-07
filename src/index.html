@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap Card – Odoo</title>
+    <title>Odoo assignment – UX/UI Designer</title>
 </head>
 <body class="container">
-    <div class="card mt-5 mx-auto w-600 mw-100">
+    <div class="card mw-600 mx-auto mt-5">
         <!-- Navigation tabs -->
         <div class="card-header bg-dark border-bottom-0">
             <ul class="nav nav-tabs card-header-tabs" id="nav-tab" role="tablist">
                 <li class="nav-item bg-gray">
-                    <a class="nav-link active" id="tab1-tab" data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true">Tab 1</a>
+                    <button class="nav-link active" id="tab1-tab" data-bs-toggle="tab" data-bs-target="#tab1" role="tab" aria-controls="tab1" aria-selected="true">Tab 1</button>
                 </li>
-                <li class="nav-item ml-1 bg-gray">
-                    <a class="nav-link" id="tab2-tab" data-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false">Tab 2</a>
+                <li class="nav-item ms-1 bg-gray">
+                    <button class="nav-link" id="tab2-tab" data-bs-toggle="tab" data-bs-target="#tab2" role="tab" aria-controls="tab2" aria-selected="false">Tab 2</button>
                 </li>
-                <li class="nav-item ml-1 bg-gray">
-                    <a class="nav-link" id="tab3-tab" data-toggle="tab" href="#tab3" role="tab" aria-controls="tab3" aria-selected="false">Tab 3</a>
+                <li class="nav-item ms-1 bg-gray">
+                    <button class="nav-link" id="tab3-tab" data-bs-toggle="tab" data-bs-target="#tab3" role="tab" aria-controls="tab3" aria-selected="false">Tab 3</button>
                 </li>
-                <li class="nav-item ml-1 bg-gray">
-                    <a class="nav-link disabled bg-secondary text-white" data-toggle="tab" role="tab" tabindex="-1" aria-disabled="true">Disabled</a>
+                <li class="nav-item ms-1 bg-gray">
+                    <button class="nav-link disabled bg-secondary text-white" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled" role="tab" aria-controls="disabled" tabindex="-1" aria-disabled="true" disabled>Disabled</button>
                 </li>
             </ul>
         </div>
@@ -28,23 +28,23 @@
         <!-- Card content -->
         <div class="card-body p-0">
             <div class="tab-content" id="nav-tabContent">
-                <div class="tab-pane show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+                <div class="tab-pane show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab" tabindex="0">
                     <div class="pt-3 px-3 pb-4 border-bottom">
                         <h2 class="card-title h5">Card title</h4>
                         <h3 class="card-subtitle h6 text-muted">Card subtitle</h6>
                     </div>
-                    <div class="row no-gutters">
+                    <div class="row g-0">
                         <div class="col-md-6">
                             <div class="list-group list-group-flush" id="items-tab" role="tablist">
-                                <a class="list-group-item list-group-item-action active" id="items-1-tab" data-toggle="pill" href="#items-1" role="tab" aria-controls="items-1" aria-selected="true">
+                                <button class="list-group-item list-group-item-action active" id="items-1-tab" data-bs-toggle="tab" data-bs-target="#items-1" role="tab" aria-controls="items-1" aria-selected="true">
                                     An item
-                                </a>
-                                <a class="list-group-item list-group-item-action" id="items-2-tab" data-toggle="pill" href="#items-2" role="tab" aria-controls="items-2" aria-selected="false">
+                                </button>
+                                <button class="list-group-item list-group-item-action" id="items-2-tab" data-bs-toggle="tab" data-bs-target="#items-2" role="tab" aria-controls="items-2" aria-selected="false">
                                     A second item
-                                </a>
-                                <a class="list-group-item list-group-item-action" id="items-3-tab" data-toggle="pill" href="#items-3" role="tab" aria-controls="items-3" aria-selected="false">
+                                </button>
+                                <button class="list-group-item list-group-item-action" id="items-3-tab" data-bs-toggle="tab" data-bs-target="#items-3" role="tab" aria-controls="items-3" aria-selected="false">
                                     A third item
-                                </a>
+                                </button>
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -52,18 +52,24 @@
                                 <div class="tab-pane show active" id="items-1" role="tabpanel" aria-labelledby="items-1-tab">
                                     <picture>
                                         <source srcset="https://placehold.co/555x345/blue/white?text=Pic-1" media="(max-width: 768px)" width="555" height="345">
+                                        <source srcset="https://placehold.co/174x174/blue/white?text=Pic-1" media="(max-width: 992px)" width="174" height="174">
+                                        <source srcset="https://placehold.co/234x174/blue/white?text=Pic-1" media="(max-width: 1200px)" width="234" height="174">
                                         <img class="img-fluid" src="https://placehold.co/300x175/blue/white?text=Pic-1" alt="White 'Pic-1' text on a blue background" width="300" height="175">
                                     </picture>
                                 </div>
                                 <div class="tab-pane" id="items-2" role="tabpanel" aria-labelledby="items-2-tab">
                                     <picture>
                                         <source srcset="https://placehold.co/555x345/yellow/black?text=Pic-2" media="(max-width: 768px)" width="555" height="345">
+                                        <source srcset="https://placehold.co/174x174/yellow/black?text=Pic-2" media="(max-width: 992px)" width="174" height="174">
+                                        <source srcset="https://placehold.co/234x174/yellow/black?text=Pic-2" media="(max-width: 1200px)" width="234" height="174">
                                         <img class="img-fluid" src="https://placehold.co/300x175/yellow/black?text=Pic-2" alt="Black 'Pic-2' text on a yellow background" width="300" height="175">
                                     </picture>
                                 </div>
                                 <div class="tab-pane" id="items-3" role="tabpanel" aria-labelledby="items-3-tab">
                                     <picture>
                                         <source srcset="https://placehold.co/555x345/black/white?text=Pic-3" media="(max-width: 768px)" width="555" height="345">
+                                        <source srcset="https://placehold.co/174x174/black/white?text=Pic-3" media="(max-width: 992px)" width="174" height="174">
+                                        <source srcset="https://placehold.co/234x174/black/white?text=Pic-3" media="(max-width: 1200px)" width="234" height="174">
                                         <img class="img-fluid" src="https://placehold.co/300x175/black/white?text=Pic-3" alt="White 'Pic-3' text on a black background" width="300" height="175">
                                     </picture>
                                 </div>
@@ -71,7 +77,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+                <div class="tab-pane" id="tab2" role="tabpanel" aria-labelledby="tab2-tab" tabindex="0">
                     <div class="d-flex justify-content-center align-items-center flex-column p-5">
                         Loading…
                         <svg class="mt-2" width="34" height="34" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34">
@@ -83,11 +89,13 @@
                         </svg>
                     </div>
                 </div>
-                <div class="tab-pane" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
-                    <div class="row no-gutters">
+                <div class="tab-pane" id="tab3" role="tabpanel" aria-labelledby="tab3-tab" tabindex="0">
+                    <div class="row g-0">
                         <div class="col-md-4">
                             <picture>
                                 <source srcset="https://placehold.co/555x345/red/white?text=Image" media="(max-width: 768px)" width="555" height="345" class="img-fluid">
+                                <source srcset="https://placehold.co/116x212/red/white?text=Image" media="(max-width: 992px)" width="116" height="212" class="img-fluid">
+                                <source srcset="https://placehold.co/156x169/red/white?text=Image" media="(max-width: 1200px)" width="156" height="169" class="img-fluid">
                                 <img src="https://placehold.co/200x186/red/white?text=Image" alt="White 'Image' text on a red background"  width="200" height="186" class="img-fluid">
                             </picture>
                         </div>
@@ -99,6 +107,11 @@
                             </div>
                         </div>
                         </div>
+                </div>
+                <div class="tab-pane" id="disabled" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">
+                    <div class="d-flex justify-content-center align-items-center flex-column p-5">
+                        Disabled
+                    </div>
                 </div>
             </div>
             <div class="card-footer bg-dark text-white">
