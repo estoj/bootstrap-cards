@@ -118,3 +118,44 @@ $utilities: map-merge(
 
 // Utilities
 @import "bootstrap/scss/utilities/api";
+
+// Mixin (Variant C)
+
+// Applying new styles to selected variables
+@mixin custom-card-styles($theme-color, $theme-value) {
+    @if($theme-color == 'light') {
+        --#{$prefix}gray-rgb: #{to-rgb(darken($theme-value, 10%))};
+        --#{$prefix}dark-rgb: #{to-rgb(darken($theme-value, 5%))};
+        --#{$prefix}white-rgb: #{to-rgb(darken($theme-value, 60%))};
+        .disabled {
+            --#{$prefix}secondary-rgb: #{to-rgb(darken($theme-value, 5%))};;
+        }
+    } @else {
+        --#{$prefix}gray-rgb: #{to-rgb(lighten($theme-value, 30%))};
+        --#{$prefix}dark-rgb: #{to-rgb($theme-value)};
+        .disabled {
+            --#{$prefix}secondary-rgb: #{to-rgb(lighten($theme-value, 10%))};;
+        }
+    }
+    
+    --#{$prefix}link-color: var(--#{$prefix}#{$theme-color}-text-emphasis);
+    --#{$prefix}border-color: var(--#{$prefix}#{$theme-color}-border-subtle);
+    --#{$prefix}card-bg: var(--#{$prefix}#{$theme-color}-bg-subtle);
+    --#{$prefix}card-color: var(--#{$prefix}#{$theme-color}-text-emphasis);
+    --#{$prefix}card-border-color: var(--#{$prefix}#{$theme-color}-border-subtle);
+    .nav {
+        --#{$prefix}nav-link-hover-color: var(--#{$prefix}#{$theme-color});
+    }
+    .list-group-item {
+        --#{$prefix}list-group-bg: var(--#{$prefix}card-bg);
+        --#{$prefix}list-group-action-color: $theme-value;
+        --#{$prefix}list-group-action-hover-bg: var(--#{$prefix}#{$theme-color}-border-subtle);
+    }
+}
+
+// Assign new variables to custom classes (e.a.: .card-success) which is applied along the div.card element
+@each $color, $value in $theme-colors {
+    .card-#{$color} {
+        @include custom-card-styles($color, $value);
+    }
+}

@@ -9,6 +9,7 @@ export default ({
       input: {
         main: 'src/index.html',
         variantb: 'src/variant-b/index.html',
+        variantc: 'src/variant-c/index.html',
       }
     },
     outDir: '../dist'

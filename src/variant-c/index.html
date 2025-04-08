@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Variant A – UX/UI Designer assignment</title>
+    <title>Variant C – UX/UI Designer assignment</title>
 </head>
 <body class="container pb-5">
     <header class="mt-3">
         <nav class="navbar navbar-expand-md mw-50">
-            <a class="navbar-brand" href="/">
-                <img class="d-block img-fluid" src="./img/odoo_logo.svg" alt="Odoo’s logo" width="68" height="22">
+            <a class="navbar-brand" href="../">
+                <img class="d-block img-fluid" src="../img/odoo_logo.svg" alt="Odoo’s logo" width="68" height="22">
                 <span class="visually-hidden sr-only">Odoo</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,19 +17,33 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <div class="navbar-nav ms-md-auto column-gap-3">
-                    <a class="nav-link active" aria-current="page" href="./">Home</a>
-                    <a class="nav-link" href="./variant-b">Redesigned card</a>
-                    <a class="nav-link" href="./variant-c">Themed card</a>
+                    <a class="nav-link" href="../">Home</a>
+                    <a class="nav-link" href="../variant-b">Redesigned card</a>
+                    <a class="nav-link active" aria-current="page" href="../variant-c">Themed card</a>
                     <!-- <a class="nav-link" href="variant-d">UX report</a> -->
                 </div>
             </div>
         </nav>
     </header>
     <div class="mt-5">
-        <h1 class="h2 text-primary mb-1">Default card</h1>
-        <p class="text-uppercase text-body-secondary"><small>Variant A</small></p>
+        <h1 class="h2 text-primary mb-1">Themed card</h1>
+        <p class="text-uppercase text-body-secondary"><small>Variant C</small></p>
     </div>
-    <div class="card mw-600 mx-auto mt-5">
+    <form action="#" class="mw-600 mx-auto mt-5">  
+        <label for="themeSelector" class="form-label">Select a theme</label>
+        <select id="themeSelector" class="form-select">
+            <option value="" selected>None</option>
+            <option value="primary">Primary</option>
+            <option value="secondary">Secondary</option>
+            <option value="success">Success</option>
+            <option value="info">Info</option>
+            <option value="warning">Warning</option>
+            <option value="danger">Danger</option>
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+          </select>
+    </form>
+    <div id="card" class="card mw-600 mx-auto mt-3">
         <!-- Navigation tabs -->
         <div class="card-header bg-dark border-bottom-0">
             <ul class="nav nav-tabs card-header-tabs" id="nav-tab" role="tablist">
@@ -59,13 +73,13 @@
                     <div class="row g-0">
                         <div class="col-md-6">
                             <div class="list-group list-group-flush" id="items-tab" role="tablist">
-                                <button class="list-group-item list-group-item-action active" id="items-1-tab" data-bs-toggle="tab" data-bs-target="#items-1" role="tab" aria-controls="items-1" aria-selected="true">
+                                <button class="list-group-item list-group-item-action active" id="items-1-tab" data-bs-toggle="pill" data-bs-target="#items-1" role="tab" aria-controls="items-1" aria-selected="true">
                                     An item
                                 </button>
-                                <button class="list-group-item list-group-item-action" id="items-2-tab" data-bs-toggle="tab" data-bs-target="#items-2" role="tab" aria-controls="items-2" aria-selected="false">
+                                <button class="list-group-item list-group-item-action" id="items-2-tab" data-bs-toggle="pill" data-bs-target="#items-2" role="tab" aria-controls="items-2" aria-selected="false">
                                     A second item
                                 </button>
-                                <button class="list-group-item list-group-item-action" id="items-3-tab" data-bs-toggle="tab" data-bs-target="#items-3" role="tab" aria-controls="items-3" aria-selected="false">
+                                <button class="list-group-item list-group-item-action" id="items-3-tab" data-bs-toggle="pill" data-bs-target="#items-3" role="tab" aria-controls="items-3" aria-selected="false">
                                     A third item
                                 </button>
                             </div>
@@ -135,6 +149,6 @@
         </div>
     </div>
 
-    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="../js/main.js"></script>
 </body>
 </html> 
