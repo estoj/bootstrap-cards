@@ -10,6 +10,7 @@ export default ({
         main: 'src/index.html',
         variantb: 'src/variant-b/index.html',
         variantc: 'src/variant-c/index.html',
+        variantd: 'src/variant-d/index.html',
       }
     },
     outDir: '../dist'

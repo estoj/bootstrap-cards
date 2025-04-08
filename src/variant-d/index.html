@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Variant D – UX/UI Designer assignment</title>
+</head>
+<body class="container pb-5">
+    <header class="mt-3">
+        <nav class="navbar navbar-expand-md mw-50">
+            <a class="navbar-brand" href="/">
+                <img class="d-block img-fluid" src="../img/odoo_logo.svg" alt="Odoo’s logo" width="68" height="22">
+                <span class="visually-hidden sr-only">Odoo</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav ms-md-auto column-gap-3">
+                    <a class="nav-link" href="../">Home</a>
+                    <a class="nav-link" href="../variant-b">Redesigned card</a>
+                    <a class="nav-link" href="../variant-c">Themed card</a>
+                    <a class="nav-link active" aria-current="page" href="../variant-d">UX report</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="mt-5">
+        <h1 class="h2 text-primary mb-1">UX report</h1>
+        <p class="text-uppercase text-body-secondary"><small>Variant D</small></p>
+    </div>
+    <div class="mw-600 mx-auto mt-3">
+        <h2 class="h4 text-primary-emphasis">
+            Introduction
+        </h2>
+        <p>
+            This analysis focuses exclusively on the card from Variant A, based on the video and screenshot that was provided.<br>
+            Given the lack of content for this element, this report is necessarily limited by an absence of context regarding its use, particularly in terms of information hierarchy and the relevance or not of such a layout. 
+        </p>
+        <h2 class="h4 text-primary-emphasis">
+            Strengths
+        </h2>
+        <ol>
+            <li>
+                <strong class="text-primary">Consistency:</strong>
+                The layout, spacing and color consistency across tabs allow good predictability for users, which gives a smooth navigation.
+            </li>
+            <li>
+                <strong class="text-primary">Responsive design:</strong>
+                The component adjusts appropriately for different viewport sizes, delivering a slick experience on most used screen sizes.
+            </li>
+        </ol>
+        <h2 class="h4 text-primary-emphasis">
+            Usability Issues
+        </h2>
+        <p>
+            Despite adhering to basic usability principles, this component still has several weaknesses.
+        </p>
+        <ol>
+            <li>
+                <strong class="text-primary">Visual Hierarchy</strong> <small class="text-secondary">(severity: high)</small><br>
+                This component lacks clear visual prioritization, notably between title and content font sizes, with the main visual differences between all elements being almost exclusively color (the 'primary' color having relatively limited contrast with the regular text color) and font weight.
+            </li>
+            <li>
+                <strong class="text-primary">Interactive Feedback</strong> <small class="text-secondary">(severity: high)</small><br>
+                All buttons lack clear hover states to indicate interactivity and using the primary color on a white or light gray background does not give enough predictability.
+            </li>
+            <li>
+                <strong class="text-primary">Information Hierarchy</strong> <small class="text-secondary">(severity: medium)</small><br>
+                Despite a basic structure using tabs, this component does not allow to fully identify its key elements, namely its purpose, its interactive elements (as mentioned in the previous point) as well as a good vision of its usefulness.<br>
+                Also, using a list of buttons to navigate between the 3 images is also not ergonomically appropriate.
+            </li>
+        </ol>
+        <h2 class="h4 text-primary-emphasis">
+            Redesigning the element
+        </h2>
+        <p>
+            While this card implementation provides a functional layout, several usability issues hinder the overall user experience.<br>
+            Therefore, I tried to fix the negative points, including:
+        </p>
+        <ul>
+            <li><strong>Improving visual contrast</strong> with a better font size scale.</li>
+            <li><strong>Improving the affordance</strong> of interactive elements, with a clearer hover state.</li>
+            <li>Revising the functionality of the image selection buttons by <strong>transforming this section into a slider</strong>, which eliminates the need to move the cursor to change images, and avoids having an endless list as the image list grows longer.</li>
+        </ul>
+        <p>You can see the result of the overall on the redesigned card page.</p>
+        <a href="../variant-b" class="btn btn-primary">Discover the new card</a>
+    </div>
+
+    <script type="module" src="../js/main.js"></script>
+</body>
+</html> 

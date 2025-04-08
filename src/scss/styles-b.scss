@@ -49,7 +49,6 @@ $list-group-action-active-bg:       transparent;
 $card-border-color:                 var(--#{$prefix}border-color);
 
 // Carousel
-$carousel-control-color:            $primary;
 $carousel-control-opacity:          1;
 
 $carousel-caption-spacer:           0;
@@ -139,7 +138,7 @@ $utilities: map-merge(
 .carousel-control-prev-icon, .carousel-control-next-icon {
   width: 2.25rem;
   height: 2.25rem;
-  background-color: $gray-300;
+  background-color: $primary;
   background-size: 1.5rem auto;
   border-radius: $border-radius;
 }
@@ -148,5 +147,13 @@ $utilities: map-merge(
   @include media-breakpoint-up(sm) {
     --#{$prefix}nav-link-font-size: 1rem;
     --#{$prefix}nav-link-padding-x: 1rem;
+  }
+}
+
+.nav-tabs .nav-link {
+  background-color: $primary-bg-subtle;
+  &:hover {
+    color: $white;
+    background-color: $primary;
   }
 }
