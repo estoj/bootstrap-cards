@@ -1,0 +1,152 @@
+// Init
+@import "bootstrap/scss/functions";
+
+// Options
+$enable-dark-mode: false;
+// $enable-gradients: false;
+// $enable-rounded: false;
+// $enable-shadows: false;
+$enable-cssgrid: false;
+$spacer: 1.25rem;
+
+$prefix:                            bs-;
+
+// Colors
+$purple: #65578e;
+$dark: #343a40;
+$primary: $purple;
+
+// Font Family and Font Size
+$font-family-sans-serif:            "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-size-base:                    0.875rem; // 14px based on the design, using the browser default, typically `16px`
+
+// Headings 
+$headings-font-weight:              700;
+$headings-line-height:              1.1;
+
+$h5-font-size:                      $font-size-base * 1.1;
+
+// Nav Tabs
+$nav-link-padding-y:                .5rem;
+$nav-link-padding-x:                .5rem;
+$nav-link-font-size:                .875rem;
+
+// List Group
+$list-group-item-padding-y:         1.125rem;
+$list-group-item-padding-x:         1.25rem;
+
+$list-group-hover-bg:               var(--#{$prefix}white);
+$list-group-active-color:           var(--#{$prefix}body-color);
+$list-group-active-bg:              transparent;
+
+$list-group-action-color:           $primary;
+$list-group-action-hover-color:     darken($primary, 15%);
+
+$list-group-action-active-color:    var(--#{$prefix}body-color);
+$list-group-action-active-bg:       transparent;
+
+// Card
+$card-border-color:                 var(--#{$prefix}border-color);
+
+// Carousel
+$carousel-control-color:            $primary;
+$carousel-control-opacity:          1;
+
+$carousel-caption-spacer:           0;
+
+// Configuration
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+
+// Merge maps
+$spacers: map-merge($spacers, (
+    1: ($spacer * 0.3)
+));
+$theme-colors: map-merge($theme-colors, (
+  "gray": $gray-300,
+));
+
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+
+// Custom utilities
+$utilities: map-merge(
+  $utilities,
+  (
+    "max-width": map-merge(
+      map-get($utilities, "max-width"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "max-width"), "values"),
+          (600: 600px),
+        ),
+      ),
+    ),
+  )
+);
+
+
+// Layout & components
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
+@import "bootstrap/scss/type";
+@import "bootstrap/scss/images";
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/grid";
+@import "bootstrap/scss/tables";
+@import "bootstrap/scss/forms";
+@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/transitions";
+@import "bootstrap/scss/dropdown";
+@import "bootstrap/scss/button-group";
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar";
+@import "bootstrap/scss/card";
+@import "bootstrap/scss/accordion";
+@import "bootstrap/scss/breadcrumb";
+@import "bootstrap/scss/pagination";
+@import "bootstrap/scss/badge";
+@import "bootstrap/scss/alert";
+@import "bootstrap/scss/progress";
+@import "bootstrap/scss/list-group";
+@import "bootstrap/scss/close";
+@import "bootstrap/scss/toasts";
+@import "bootstrap/scss/modal";
+@import "bootstrap/scss/tooltip";
+@import "bootstrap/scss/popover";
+@import "bootstrap/scss/carousel";
+@import "bootstrap/scss/spinners";
+@import "bootstrap/scss/offcanvas";
+@import "bootstrap/scss/placeholders";
+
+// Helpers
+@import "bootstrap/scss/helpers";
+
+// Utilities
+@import "bootstrap/scss/utilities/api";
+
+// Custom CSS
+.carousel-item {
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(to top, transparentize($gray-900, 0.5) 0%, transparentize($gray-900, 1) 25%);
+  }
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  background-color: $gray-300;
+  background-size: 1.5rem auto;
+  border-radius: $border-radius;
+}
+
+.nav {
+  @include media-breakpoint-up(sm) {
+    --#{$prefix}nav-link-font-size: 1rem;
+    --#{$prefix}nav-link-padding-x: 1rem;
+  }
+}
